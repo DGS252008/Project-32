@@ -69,7 +69,7 @@ function draw() {
   background("#99C1B9");
   fill("#EE6C4D")
   textSize(20);
-  text("Score: " + score, 1120, 20);
+  text("Score: " + score, 1000, 20);
     
   Engine.update(engine);
 

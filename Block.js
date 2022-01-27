@@ -14,7 +14,7 @@ class Block{
       
       World.add(world, this.body);
 
-      this.Visiblity = 255;
+      this.Visibility = 255;
     }
     display(){
      if(this.body.speed < 3){
@@ -36,7 +36,7 @@ class Block{
 
 
     score(){
-      if (this.Visiblity < 0 && this.Visiblity > -1005){
+      if (this.Visibility < 0 && this.Visibility >-105){
         score++;
       }
     }
