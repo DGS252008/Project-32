@@ -66,7 +66,7 @@ block_9 = new Block(770, 400, 30, 40);
 }
 
 function draw() {
-  background("#99C1B9");
+  backgroundColor();
   fill("#EE6C4D")
   textSize(20);
   text("Score: " + score, 1000, 20);
@@ -149,4 +149,20 @@ function mouseDragged(){
 
 function mouseReleased(){
 slingShot.fly();
+}
+
+async function backgroundColor(){
+  var response = await fetch("https://worldtimeapi.org/api/timezone/America/Los_Angeles");
+  var responseJSON = await response.json();
+  var dateTime = responseJSON.datetime;
+  var hour = dateTime.slice(11,13);
+
+  if(hour >= 06 &&
+     hour <= 19){
+         background("#FFFFF0");
+     }
+  else{
+      background("#99C1B9");
+  }
+  backgroundImg = loadImage(bg);
 }
